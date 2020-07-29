@@ -1,5 +1,8 @@
 ## Austin Traffic App
 
+![app](/app.gif)
+
+
 External libraries (Python):
 - flask
 - googlemaps
