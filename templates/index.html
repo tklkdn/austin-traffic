@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Taka Kodani</title>
+		<link rel="stylesheet" href="../static/styles.css">
+		<link rel="stylesheet" href="../static/foundation-datepicker.min.css">
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+		<script src="../static/foundation-datepicker.min.js"></script>
+	</head>
+	<body>
+		<h2>Austin Traffic Score<span id="avgScore">{{avg}}</span></h2>
+		<div id="rectCanvas"></div>
+		<div id="north"></div>
+		<div id="central"></div>
+		<div id="east"></div>
+		<div id="southeast"></div>
+		<div id="southcentral"></div>
+		<div id="south"></div>
+		<div id="west"></div>
+		<form action="/" method="POST">
+			<input type="text" value="{{datetime}}" id="datetime" name="datetime">
+			<input id="submit" type="submit" name="submit" value="&#10004; Check traffic">
+		</form>
+		<div id="accordion">
+			<h4 class="accordion-toggle">
+				 Your Commute
+			</h4>
+			<div class="accordion-content">
+				<p>To school<span class="region-score">{{allScores[1]}}</span></p>
+				<p>From school<span class="region-score">{{allScores[0]}}</span></p>
+				<p>To work<span class="region-score">{{allScores[3]}}</span></p>
+				<p>From work<span class="region-score">{{allScores[2]}}</span></p>
+				<p class="route" id="new-route">&#8853; Add new route</p>
+				<p class="route" id="old-route">&#8854; Delete a route</p>
+			</div>
+			<h4 class="accordion-toggle">
+				 Central<span class="region-score">{{scoreList2[0]}}</span>
+			</h4>
+			<div class="accordion-content">
+				<p>I-35 SB<span class="region-score">{{allScores[6]}}</span></p>
+				<p>I-35 NB<span class="region-score">{{allScores[7]}}</span></p>
+				<p>Lamar SB<span class="region-score">{{allScores[14]}}</span></p>
+				<p>Lamar NB<span class="region-score">{{allScores[15]}}</span></p>
+				<p>Mopac SB<span class="region-score">{{allScores[16]}}</span></p>
+				<p>Mopac NB<span class="region-score">{{allScores[17]}}</span></p>
+			</div>
+			<h4 class="accordion-toggle">
+				North<span class="region-score">{{scoreList2[1]}}</span>
+			</h4>
+			<div class="accordion-content">
+				<p>I35 NB<span class="region-score">{{allScores[8]}}</span></p>
+				<p>I35 SB<span class="region-score">{{allScores[9]}}</span></p>
+				<p>Mopac SB<span class="region-score">{{allScores[10]}}</span></p>
+				<p>Mopac NB<span class="region-score">{{allScores[11]}}</span></p>
+				<p>183/290 WB<span class="region-score">{{allScores[12]}}</span></p>
+				<p>183/290 EB<span class="region-score">{{allScores[13]}}</span></p>
+			</div>
+			<h4 class="accordion-toggle">
+				East<span class="region-score">{{scoreList2[2]}}</span>
+			</h4>
+			<div class="accordion-content">
+				<p>MLK Jr WB<span class="region-score">{{allScores[4]}}</span></p>
+				<p>MLK Jr EB<span class="region-score">{{allScores[5]}}</span></p>
+				<p>I-35 SB<span class="region-score">{{allScores[6]}}</span></p>
+				<p>I-35 NB<span class="region-score">{{allScores[7]}}</span></p>
+			</div>
+			<h4 class="accordion-toggle">
+				Southeast<span class="region-score">{{scoreList2[3]}}</span>
+			</h4>
+			<div class="accordion-content">
+				<p>71 WB<span class="region-score">{{allScores[22]}}</span></p>
+				<p>71 EB<span class="region-score">{{allScores[23]}}</span></p>
+				<p>Montopolis/Stassney SB<span class="region-score">{{allScores[24]}}</span></p>
+				<p>Montopolis/Stassney NB<span class="region-score">{{allScores[25]}}</span></p>
+				<p>I-35 SB<span class="region-score">{{allScores[26]}}</span></p>
+				<p>I-35 NB<span class="region-score">{{allScores[27]}}</span></p>
+			</div>
+			<h4 class="accordion-toggle">
+				South Central<span class="region-score">{{scoreList2[4]}}</span>
+			</h4>
+			<div class="accordion-content">
+				<p>Congress SB<span class="region-score">{{allScores[28]}}</span></p>
+				<p>Congress NB<span class="region-score">{{allScores[29]}}</span></p>
+				<p>Riverside/Barton Springs WB<span class="region-score">{{allScores[30]}}</span></p>
+				<p>Riverside/Barton Springs EB<span class="region-score">{{allScores[31]}}</span></p>
+			</div>
+			<h4 class="accordion-toggle">
+				South<span class="region-score">{{scoreList2[5]}}</span>
+			</h4>
+			<div class="accordion-content">
+				<p>I-35 SB<span class="region-score">{{allScores[26]}}</span></p>
+				<p>I-35 NB<span class="region-score">{{allScores[27]}}</span></p>
+				<p>Slaughter WB<span class="region-score">{{allScores[32]}}</span></p>
+				<p>Slaughter EB<span class="region-score">{{allScores[33]}}</span></p>
+				<p>Manchaca SB<span class="region-score">{{allScores[34]}}</span></p>
+				<p>Manchaca NB<span class="region-score">{{allScores[35]}}</span></p>
+				<p>Oltorf/Barton Springs WB<span class="region-score">{{allScores[36]}}</span></p>
+				<p>Oltorf/Barton Springs EB<span class="region-score">{{allScores[37]}}</span></p>
+			</div>
+			<h4 class="accordion-toggle">
+				West<span class="region-score">{{scoreList2[6]}}</span>
+			</h4>
+			<div class="accordion-content">
+				<p>Mopac SB<span class="region-score">{{allScores[16]}}</span></p>
+				<p>Mopac NB<span class="region-score">{{allScores[17]}}</span></p>
+				<p>360 SB<span class="region-score">{{allScores[18]}}</span></p>
+				<p>360 NB<span class="region-score">{{allScores[19]}}</span></p>
+				<p>Bee Cave WB<span class="region-score">{{allScores[20]}}</span></p>
+				<p>Bee Cave EB<span class="region-score">{{allScores[21]}}</span></p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var centralColor = document.getElementById("central");
+			var cScore = "{{scoreList[0]}}";
+			centralColor.style.background = "rgba(225,0,0," + cScore + ")";
+			console.log(cScore)
+			
+			var northColor = document.getElementById("north");
+			var nScore = "{{scoreList[1]}}";
+			northColor.style.background = "rgba(225,0,0," + nScore + ")";
+			
+			var eastColor = document.getElementById("east");
+			var eScore = "{{scoreList[2]}}";
+			eastColor.style.background = "rgba(225,0,0," + eScore + ")";
+		
+			var southeastColor = document.getElementById("southeast");
+			var seScore = "{{scoreList[3]}}";
+			southeastColor.style.background = "rgba(225,0,0," + seScore + ")";
+			
+			var southcentralColor = document.getElementById("southcentral");
+			var scScore = "{{scoreList[4]}}";
+			southcentralColor.style.background = "rgba(225,0,0," + scScore + ")";
+			
+			var southColor = document.getElementById("south");
+			var sScore = "{{scoreList[5]}}";
+			southColor.style.background = "rgba(225,0,0," + sScore + ")";
+
+			var westColor = document.getElementById("west");
+			var wScore = "{{scoreList[6]}}";
+			westColor.style.background = "rgba(225,0,0," + wScore + ")";
+			
+			$(document).ready(function (e) {
+
+				$('#rectCanvas').click(function (e) { //Offset mouse Position
+					var posX = $(this).offset().left,
+						posY = $(this).offset().top;
+					var yCoord = Math.round((((e.pageY - posY)/400) * 33650) + 14290)
+					var xCoord = Math.round((((e.pageX - posX)/436) * 42700) + 42700)
+					alert("30." + yCoord + ", " + "-97." + xCoord)
+				});	
+			//30.47,-97.89 30.15,-97.58 height x width
+			});
+			
+			$('#datetime').fdatepicker({
+				format: 'mm-dd-yyyy hh:ii',
+				pickTime: true
+			});
+			
+			$(document).ready(function($) {
+				$('#accordion').find('.accordion-toggle').click(function(){
+
+					//Expand or collapse this panel
+					$(this).next().slideToggle('fast');
+
+					//Hide the other panels
+					$(".accordion-content").not($(this).next()).slideUp('fast');
+				});
+			});
+		</script>
+	</body>
+</html>

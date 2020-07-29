@@ -1,0 +1,190 @@
+#north {
+	width: 400px;
+	height: 400px;
+	-webkit-clip-path: polygon(36% 9%, 46% 16%, 47% 22%, 46% 26%, 48% 28%, 53% 32%, 54% 38%, 63% 44%, 76% 43%, 81% 40%, 81% 38%, 84% 27%, 83% 19%, 76% 14%, 64% 10%, 58% 9%, 52% 7%, 45% 6%);
+	clip-path: polygon(36% 9%, 46% 16%, 47% 22%, 46% 26%, 48% 28%, 53% 32%, 54% 38%, 63% 44%, 76% 43%, 81% 40%, 81% 38%, 84% 27%, 83% 19%, 76% 14%, 64% 10%, 58% 9%, 52% 7%, 45% 6%);
+	position: absolute;
+	top: 100px;
+	left: 50px;
+}
+
+#central {
+	width: 400px;
+	height: 400px;
+	-webkit-clip-path: polygon(48% 30%, 52% 32%, 53% 39%, 56% 41%, 55% 44%, 55% 47%, 49% 59%, 48% 64%, 48% 66%, 46% 63%, 40% 60%, 44% 54%, 44% 42%);
+	clip-path: polygon(48% 30%, 52% 32%, 53% 39%, 56% 41%, 55% 44%, 55% 47%, 49% 59%, 48% 64%, 48% 66%, 46% 63%, 40% 60%, 44% 54%, 44% 42%);
+	position: absolute;
+	top: 100px;
+	left: 50px;
+}
+
+#east {
+	width: 400px;
+	height: 400px;
+	-webkit-clip-path: polygon(49% 67%, 49% 65%, 56% 48%, 56% 45%, 57% 42%, 62% 45%, 74% 44%, 82% 42%, 86% 49%, 86% 53%, 84% 57%, 81% 61%, 75% 73%, 72% 70%, 63% 67%, 58% 67%, 53% 67%, 51% 68%);
+	clip-path: polygon(49% 67%, 49% 65%, 56% 48%, 56% 45%, 57% 42%, 62% 45%, 74% 44%, 82% 42%, 86% 49%, 86% 53%, 84% 57%, 81% 61%, 75% 73%, 72% 70%, 63% 67%, 58% 67%, 53% 67%, 51% 68%);
+	position: absolute;
+	top: 100px;
+	left: 50px;
+}
+
+#southeast {
+	width: 400px;
+	height: 400px;
+	-webkit-clip-path: polygon(49% 68%, 53% 69%, 54% 68%, 57% 69%, 63% 68%, 72% 71%, 74% 75%, 74% 83%, 72% 87%, 68% 92%, 65% 98%, 61% 100%, 50% 99%, 36% 99%, 37% 93%, 39% 89%, 45% 78%);
+	clip-path: polygon(49% 68%, 53% 69%, 54% 68%, 57% 69%, 63% 68%, 72% 71%, 74% 75%, 74% 83%, 72% 87%, 68% 92%, 65% 98%, 61% 100%, 50% 99%, 36% 99%, 37% 93%, 39% 89%, 45% 78%);
+	position: absolute;
+	top: 100px;
+	left: 50px;
+}
+
+#southcentral {
+	width: 400px;
+	height: 400px;
+	-webkit-clip-path: polygon(40% 61%, 46% 64%, 47% 66%, 48% 68%, 45% 76%, 41% 74%, 37% 73%, 36% 72%, 33% 68%, 34% 66%, 36% 64%);
+	clip-path: polygon(40% 61%, 46% 64%, 47% 66%, 48% 68%, 45% 76%, 41% 74%, 37% 73%, 36% 72%, 33% 68%, 34% 66%, 36% 64%);
+	position: absolute;
+	top: 100px;
+	left: 50px;
+}
+
+#south {
+	width: 400px;
+	height: 400px;
+	-webkit-clip-path: polygon(44% 77%, 36% 91%, 34% 99%, 28% 99%, 20% 96%, 13% 90%, 6% 83%, 8% 77%, 13% 74%, 17% 72%, 27% 72%, 32% 73%, 34% 73%, 37% 74%, 39% 74%);
+	clip-path: polygon(44% 77%, 36% 91%, 34% 99%, 28% 99%, 20% 96%, 13% 90%, 6% 83%, 8% 77%, 13% 74%, 17% 72%, 27% 72%, 32% 73%, 34% 73%, 37% 74%, 39% 74%);
+	position: absolute;
+	top: 100px;
+	left: 50px;
+}
+
+#west {
+	width: 400px;
+	height: 400px;
+	-webkit-clip-path: polygon(16% 71%, 27% 71%, 34% 72%, 32% 66%, 39% 60%, 42% 54%, 43% 43%, 47% 29%, 45% 26%, 45% 17%, 36% 10%, 28% 8%, 24% 13%, 20% 21%, 15% 26%, 11% 40%, 8% 49%, 7% 55%, 7% 58%, 9% 62%, 10% 65%);
+	clip-path: polygon(16% 71%, 27% 71%, 34% 72%, 32% 66%, 39% 60%, 42% 54%, 43% 43%, 47% 29%, 45% 26%, 45% 17%, 36% 10%, 28% 8%, 24% 13%, 20% 21%, 15% 26%, 11% 40%, 8% 49%, 7% 55%, 7% 58%, 9% 62%, 10% 65%);
+	position: absolute;
+	top: 100px;
+	left: 50px;
+}
+
+#rectCanvas {
+	width: 430px;
+	height: 400px;
+	position: absolute;
+	top: 110px;
+	left: 30px;
+	border: 1px solid red;
+	border-radius: 25px;
+}
+
+#datetime {
+	width: 210px;
+	height: 40px;
+	position: absolute;
+	top: 530px;
+	left: 30px;
+	border-radius: 10px;
+	font-size: 1em;
+	font-family: Georgia, serif;
+	color: gray;
+	text-align: center;
+}
+
+#datetime:hover {
+	background-color: rgb(255,225,225);
+}
+
+#submit {
+	width: 210px;
+	height: 45px;
+	position: absolute;
+	top: 530px;
+	left: 255px;
+	border-radius: 10px;
+	font-size: 1em;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: white;
+	text-align: center;
+	background: linear-gradient(to bottom, #f85032 0%,#f02f17 0%,#f16f5c 0%,#f6290c 91%,#e73827 100%);
+}
+
+#submit:hover {
+	cursor: pointer;
+}
+
+h2 {
+	display: block;
+	font-family: Tahoma, Geneva, sans-serif;
+	color: white;
+	width: 900px;
+	background-color: #fc6262;
+	padding: 20px 25px 15px 25px;
+	margin-top: 0px;
+	border-bottom: 3pt solid #b24242;
+}
+
+#avgScore {
+	display: block;
+	float: right;
+}
+
+body {
+	background-color: #fff;
+}
+
+#accordion {
+	position: absolute;
+	top: 75px; 
+	left: 500px;
+}
+
+.accordion-toggle {
+	display: block;
+	width: 415px;
+	cursor: pointer;
+	background-color: rgb(130,130,130);
+	font-family: Tahoma, Geneva, sans-serif;
+	color: white;
+	border-radius: 5px;
+	padding: 10px;
+	border-style: outset;
+}
+
+.accordion-content {
+	display: none;
+	font-family: Tahoma, Geneva, sans-serif;
+	width: 440px;
+}
+
+.accordion-content p {
+	background-color: rgb(225,225,225);
+	padding: 5px 15px 5px 15px;
+	border-radius: 5px;
+	border-collapse: collapse;
+}
+
+.region-score {
+	display: block;
+	float: right;
+}
+
+.route {
+	margin-left: 260px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#new-route {
+	background-color: red;
+	color: white;
+	width: 150px;
+}
+
+#old-route {
+	background-color: rgb(81, 81, 81);
+	color: white;
+	width: 150px;
+}
